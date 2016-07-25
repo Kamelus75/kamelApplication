@@ -1,0 +1,19 @@
+.demo-table{
+border-bottom: 1px solid gray;
+border-collapse: collapse;
+font-family: Tahoma, Verdana,sans serif;
+border-top: 1px solid gray;
+background: none repeat scroll 0 0 #FFFFFFF;
+text-align: center;
+
+}
+.demo-table-header{
+border-bottom: 1px solid bleu; 
+background: none repeat scroll 0 0 #66CCFF;
+padding: 20px;
+}
+.demo-table, demo-table-rows{
+border-bottom: 1px solid red;
+background: none repeat scroll 0 0 #A9A9A9A;
+padding: 20px;
+}

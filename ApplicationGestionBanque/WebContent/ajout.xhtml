@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<title>Ajouter un client</title>
+
+
+
+</h:head>
+
+<h:body>
+
+	<div id="wrapper">
+		<div id="header">
+			<h2>ProxyBank</h2>
+		</div>
+	</div>
+
+	<div id="container">
+		<h3>Ajouter un client</h3>
+
+		<h:messages globalOnly="true" />
+
+		<h:form id="form" style="margin-top: 10px;">
+			<h:panelGrid columns="7">
+
+				<h:outputLabel>Nom:</h:outputLabel>
+				<h:inputText value="#{client.nom}" id="nom" />
+				<h:message for="nom" />
+
+				<h:outputLabel>Prenom:</h:outputLabel>
+				<h:inputText value="#{client.prenom}" id="prenom" />
+				<h:message for="prenom" />
+				<h:outputLabel>Adresse:</h:outputLabel>
+				<h:inputText value="#{client.adresse}" id="adresse" />
+				<h:message for="adresse" />
+
+				<h:outputLabel>Code postal:</h:outputLabel>
+				<h:inputText value="#{client.codePostal}" id="codePostal" />
+				<h:message for="codePostal" />
+				<h:outputLabel>Ville:</h:outputLabel>
+				<h:inputText value="#{client.ville}" id="ville" />
+				<h:message for="ville" />
+
+				<h:outputLabel>N° téléphone:</h:outputLabel>
+				<h:inputText value="#{client.tel}" id="tel" />
+				<h:message for="tel" />
+
+				<h:outputLabel>Email:</h:outputLabel>
+				<h:inputText value="#{client.email}" id="email" required="true"
+					requiredMessage="Your email is mandatory." />
+				<h:message for="email" />
+
+				<h:outputLabel />
+				<h:commandButton value="Sauvegarder" styleClass="save"
+					action="#{clientController.ajouterClient(client)" />
+
+			</h:panelGrid>
+		</h:form>
+
+		<div style="clear: both;"></div>
+
+		<p>
+			<h:outputLink value="liste-clients.xhtml">Retour à la liste des clients</h:outputLink>
+		</p>
+
+	</div>
+</h:body>
+</html>
